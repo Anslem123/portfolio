@@ -6,6 +6,7 @@ import {
 } from "react-icons/fi";
 import { PiBrain } from "react-icons/pi";
 import { Container } from "@/components/ui/Container";
+import { SectionEyebrow } from "@/components/ui/SectionHeader";
 import { SlideIn, StaggerChildren, StaggerItem } from "@/components/animations";
 import { personal, stats, traits } from "@/data/personal";
 import { EASE } from "@/constants/animations";
@@ -28,13 +29,10 @@ export function AboutSection() {
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Left — Text */}
+          {/* Left: text */}
           <div className="space-y-6">
             <SlideIn direction="left">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#6C63FF]">
-                <span className="h-px w-6 bg-[#6C63FF]" />
-                About Me
-              </span>
+              <SectionEyebrow>About Me</SectionEyebrow>
             </SlideIn>
 
             <SlideIn direction="left" delay={0.1}>
@@ -65,8 +63,8 @@ export function AboutSection() {
             </SlideIn>
           </div>
 
-          {/* Right — Trait cards */}
-          <StaggerChildren staggerDelay={0.08} initialDelay={0.2} className="grid sm:grid-cols-2 gap-4">
+          {/* Right: trait cards */}
+          <StaggerChildren staggerDelay={0.08} initialDelay={0.2} className="grid grid-cols-2 gap-3 md:gap-4">
             {traits.map((trait) => {
               const IconComp = TRAIT_ICON_MAP[trait.iconKey];
               return (
@@ -74,10 +72,10 @@ export function AboutSection() {
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2, ease: EASE.smooth }}
-                    className="group p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_8px_32px_rgba(108,99,255,0.1)] transition-all duration-300"
+                    className="group h-full p-4 md:p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_8px_32px_rgba(108,99,255,0.1)] transition-all duration-300"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[rgba(108,99,255,0.1)] flex items-center justify-center text-[#6C63FF] mb-3 group-hover:bg-[rgba(108,99,255,0.2)] transition-colors">
-                      {IconComp && <IconComp className="w-5 h-5" />}
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-[rgba(108,99,255,0.1)] flex items-center justify-center text-[#6C63FF] mb-2.5 md:mb-3 group-hover:bg-[rgba(108,99,255,0.2)] transition-colors">
+                      {IconComp && <IconComp className="w-4 h-4 md:w-5 md:h-5" />}
                     </div>
                     <h3 className="font-semibold text-[var(--text-primary)] text-sm mb-1">
                       {trait.title}

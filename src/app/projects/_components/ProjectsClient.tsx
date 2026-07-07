@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations";
@@ -42,25 +43,18 @@ export function ProjectsClient() {
   }, [activeFilter, query]);
 
   return (
-    <main className="section-padding min-h-screen">
+    <div className="section-padding min-h-screen">
       <Container>
 
         {/* Header */}
-        <FadeIn>
-          <div className="mb-12 text-center space-y-4">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#6C63FF]">
-              <span className="h-px w-6 bg-[#6C63FF]" />
-              Portfolio
-              <span className="h-px w-6 bg-[#6C63FF]" />
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--text-primary)]">
-              All <span className="gradient-text">Projects</span>
-            </h1>
-            <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
-              Client websites, demo templates, and full-stack applications — built with a focus on performance, design quality, and clean code.
-            </p>
-          </div>
-        </FadeIn>
+        <div className="mb-12">
+          <SectionHeader
+            eyebrow="Portfolio"
+            title={<>All <span className="gradient-text">Projects</span></>}
+            description="Client websites, demo templates, and full-stack applications — React, Next.js, and Node.js projects built with performance, design quality, and maintainable code."
+            titleAs="h1"
+          />
+        </div>
 
         {/* Search + Filter */}
         <FadeIn delay={0.15}>
@@ -116,7 +110,7 @@ export function ProjectsClient() {
                     {/* Thumbnail */}
                     <div className="relative h-44 bg-gradient-to-br from-[rgba(108,99,255,0.06)] to-[rgba(34,211,238,0.04)] overflow-hidden">
                       {project.image
-                        ? <ProjectImage src={project.image} alt={project.title} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         : <Placeholder />
                       }
                       <div className="absolute top-3 right-3 z-10">
@@ -124,7 +118,7 @@ export function ProjectsClient() {
                       </div>
                     </div>
 
-                    {/* Tint — bleeds from bottom of image into card body, z between image and content */}
+                    {/* Tint: bleeds from bottom of image into card body, z between image and content */}
                     <div
                       aria-hidden
                       className="absolute left-0 right-0 pointer-events-none z-10"
@@ -232,6 +226,6 @@ export function ProjectsClient() {
           </FadeIn>
         )}
       </Container>
-    </main>
+    </div>
   );
 }

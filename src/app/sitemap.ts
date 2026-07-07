@@ -1,22 +1,25 @@
 import type { MetadataRoute } from "next";
 import { seo } from "@/data/seo";
 import { projects } from "@/data/projects";
+import { STATIC_SITEMAP_ROUTES } from "@/constants/seo-routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = seo.siteUrl;
-  const now  = new Date();
+  const now = new Date();
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: base,          lastModified: now, changeFrequency: "monthly",  priority: 1.0   },
-    { url: `${base}/projects`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-  ];
+  const staticRoutes: MetadataRoute.Sitemap = STATIC_SITEMAP_ROUTES.map((route) => ({
+    url:             `${seo.siteUrl}${route.path}`,
+    lastModified:    now,
+    changeFrequency: route.changeFrequency,
+    priority:        route.priority,
+  }));
 
   const projectRoutes: MetadataRoute.Sitemap = projects.map((p) => ({
-    url:             `${base}/projects/${p.slug}`,
+    url:             `${seo.siteUrl}/projects/${p.slug}`,
     lastModified:    now,
     changeFrequency: "monthly" as const,
     priority:        0.7,
   }));
 
+  // Future: append blog posts, case studies, and article routes here.
   return [...staticRoutes, ...projectRoutes];
 }

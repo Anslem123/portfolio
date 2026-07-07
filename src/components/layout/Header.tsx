@@ -29,9 +29,9 @@ export function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number,number,number,number] }}
         className={cn(
-          // Always-present base — border-b is constant so its width never transitions
+          // Always-present base: border-b is constant so its width never transitions
           "fixed top-0 left-0 right-0 z-40 border-b [transform:translateZ(0)]",
-          // Transition only the properties that legitimately change — excludes
+          // Transition only the properties that legitimately change (excludes
           // backdrop-filter (would cause GPU layer flash) and border-width (constant)
           "transition-[padding,background-color,box-shadow,border-color] duration-300",
           scrolled
@@ -44,13 +44,13 @@ export function Header() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
 
-            {/* Logo — name only, no avatar */}
-            <Link href={ROUTES.home} className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[#6C63FF] transition-colors duration-200">
+            {/* Logo: name only, no avatar */}
+            <Link href={ROUTES.home} className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[#6C63FF] transition-colors duration-200" aria-label={`${personal.name} — Home`}>
               {personal.name}<span className="text-[#6C63FF]">.</span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               {navItems.map((item) => {
                 const isActive = item.href === ROUTES.home
                   ? pathname === "/"
@@ -127,7 +127,7 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="fixed top-[72px] left-4 right-4 z-40 rounded-2xl glass border border-[var(--border-color)] shadow-2xl p-4"
           >
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.href}

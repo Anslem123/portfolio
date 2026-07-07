@@ -12,6 +12,8 @@ export interface PersonalInfo {
 
 export interface SEOMetadata {
   siteUrl: string;
+  siteName: string;
+  applicationName: string;
   defaultTitle: string;
   titleTemplate: string;
   description: string;
@@ -19,6 +21,8 @@ export interface SEOMetadata {
   ogImage: string;
   twitterHandle: string;
   author: string;
+  publisher: string;
+  category: string;
   locale: string;
 }
 

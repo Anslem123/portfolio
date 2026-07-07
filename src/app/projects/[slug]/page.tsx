@@ -10,8 +10,9 @@ import {
   DatabaseIcon, ShieldIcon, CloudIcon, CodeIcon,
 } from "@/components/ui/Icon";
 import { ProjectImage, Placeholder } from "@/components/projects/ProjectImage";
+import { ProjectJsonLd } from "@/components/ui/JsonLd";
 import { projects } from "@/data/projects";
-import { seo } from "@/data/seo";
+import { createPageMetadata } from "@/lib/seo";
 import type { ProjectStatus } from "@/types/project";
 
 interface Props {
@@ -25,16 +26,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project  = projects.find((p) => p.slug === slug);
-  if (!project) return { title: "Project Not Found" };
-  return {
-    title:       project.title,
+  if (!project) {
+    return createPageMetadata({
+      title: "Project Not Found",
+      description: "The requested project could not be found.",
+      path: `/projects/${slug}`,
+      noIndex: true,
+    });
+  }
+  return createPageMetadata({
+    title: project.title,
     description: project.shortDescription,
-    openGraph: {
-      title:       project.title,
-      description: project.shortDescription,
-      url:         `${seo.siteUrl}/projects/${project.slug}`,
-    },
-  };
+    path: `/projects/${project.slug}`,
+    ogType: "article",
+  });
 }
 
 const STATUS_CONFIG: Record<ProjectStatus, { label: string; variant: "success" | "warning" | "default" }> = {
@@ -52,7 +57,8 @@ export default async function ProjectDetailPage({ params }: Props) {
   const hasDetail = !!(project.problem || project.solution || project.features?.length);
 
   return (
-    <main className="section-padding min-h-screen">
+    <article className="section-padding min-h-screen" aria-labelledby="project-title">
+      <ProjectJsonLd project={project} />
       <Container size="md">
 
         {/* Back */}
@@ -72,7 +78,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {/* Hero image banner */}
             <div className="relative w-full h-56 sm:h-72 overflow-hidden bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)]">
               {project.image
-                ? <ProjectImage src={project.image} alt={project.title} sizes="(max-width: 768px) 100vw, 768px" priority />
+                ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 768px) 100vw, 768px" priority />
                 : <Placeholder />
               }
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-[var(--bg-surface)]/10 to-transparent pointer-events-none" />
@@ -87,7 +93,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <p className="text-xs font-semibold uppercase tracking-widest text-[#6C63FF] mb-2">
               {project.category}
             </p>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-3">
+            <h1 id="project-title" className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-3">
               {project.title}
             </h1>
             <p className="text-[var(--text-secondary)] leading-relaxed mb-5">
@@ -133,7 +139,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </SlideIn>
 
-        {/* Deep-dive detail — only shown for projects with problem/solution/features */}
+        {/* Deep-dive detail (only shown for projects with problem/solution/features) */}
         {hasDetail && (
           <div className="space-y-6">
             <div className="grid lg:grid-cols-2 gap-6">
@@ -213,7 +219,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         )}
       </Container>
-    </main>
+    </article>
   );
 }
 

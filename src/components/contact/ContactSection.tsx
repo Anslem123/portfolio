@@ -87,7 +87,7 @@ function SocialCard({ name, handle, url, copyValue, icon }: SocialCardProps) {
         </motion.div>
       </div>
 
-      {/* Copy button — slides in on hover */}
+      {/* Copy button (slides in on hover) */}
       <motion.button
         onClick={handleCopy}
         aria-label={`Copy ${name}`}
@@ -141,7 +141,7 @@ export function ContactSection() {
         <SectionHeader
           eyebrow="Get In Touch"
           title={<>Let&apos;s work <span className="gradient-text">together</span></>}
-          description="Whether you have a project in mind, a role to fill, or just want to connect — I'd love to hear from you."
+          description="Whether you need a remote developer, have a freelance project, or want to discuss a full-time role — I'd love to hear from you."
           className="mb-16"
         />
 

@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title:            "Bonds Beach Cafe",
     shortDescription: "Beachside cafe website showcasing the menu, ambience, and location of Bonds Beach Cafe.",
     fullDescription:
-      "A vibrant, responsive website for Bonds Beach Cafe — a beachside dining destination. The site highlights the menu, gallery, opening hours, and contact details in a warm, inviting design that reflects the relaxed coastal atmosphere of the venue.",
+      "A vibrant, responsive website for Bonds Beach Cafe, a beachside dining destination. The site highlights the menu, gallery, opening hours, and contact details in a warm, inviting design that reflects the relaxed coastal atmosphere of the venue.",
     category:          "Restaurant & Cafe",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     id:               "mama-cecelias-beach-cafe",
     slug:             "mama-cecelias-beach-cafe",
     title:            "Mama Cecelia's Beach Cafe",
-    shortDescription: "A warm and inviting website for Mama Cecelia's — a beloved beachside cafe in Goa.",
+    shortDescription: "A warm and inviting website for Mama Cecelia's, a beloved beachside cafe in Goa.",
     fullDescription:
       "A charming restaurant website for Mama Cecelia's Beach Cafe that captures the homely, relaxed vibe of this popular Goa dining spot. Features a full menu display, photo gallery, and directions to help visitors plan their visit.",
     category:          "Restaurant & Cafe",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     title:            "Stellaris Cafe",
     shortDescription: "A modern demo website for a cafe business, built to showcase Stellaris Labs' web design capabilities.",
     fullDescription:
-      "A polished demo website template designed for cafe and coffee shop businesses. Built under Stellaris Labs, this demo showcases a full-featured restaurant site including menu sections, a gallery, reservation prompt, and contact details — all styled with a premium, modern aesthetic.",
+      "A polished demo website template designed for cafe and coffee shop businesses. Built under Stellaris Labs, this demo showcases a full-featured restaurant site including menu sections, a gallery, reservation prompt, and contact details, all styled with a premium, modern aesthetic.",
     category:          "Demo Website",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     title:            "Stellaris Dental",
     shortDescription: "A professional demo website template for dental clinics, built by Stellaris Labs.",
     fullDescription:
-      "A clean, trust-focused demo website for dental clinic businesses. Includes a services overview, doctor profiles, appointment booking prompt, and patient testimonial sections — designed to build credibility and convert visitors into patients.",
+      "A clean, trust-focused demo website for dental clinic businesses. Includes a services overview, doctor profiles, appointment booking prompt, and patient testimonial sections, designed to build credibility and convert visitors into patients.",
     category:          "Healthcare",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     title:            "Stellaris Beauty Salon",
     shortDescription: "An elegant demo website template for beauty salons and spas, crafted by Stellaris Labs.",
     fullDescription:
-      "A sophisticated, visually rich demo website for beauty salons and wellness spas. Highlights service offerings, a pricing menu, gallery, and booking prompt — all wrapped in a premium aesthetic that reflects the luxury of the beauty industry.",
+      "A sophisticated, visually rich demo website for beauty salons and wellness spas. Highlights service offerings, a pricing menu, gallery, and booking prompt, all wrapped in a premium aesthetic that reflects the luxury of the beauty industry.",
     category:          "Beauty & Wellness",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     title:            "Stellaris Gym",
     shortDescription: "A high-energy demo website template for gyms and fitness centres, built by Stellaris Labs.",
     fullDescription:
-      "A bold, motivating demo website for gyms and fitness businesses. Features membership plan cards, a class schedule section, trainer profiles, and a strong call-to-action — designed to inspire visitors and drive sign-ups.",
+      "A bold, motivating demo website for gyms and fitness businesses. Features membership plan cards, a class schedule section, trainer profiles, and a strong call-to-action, designed to inspire visitors and drive sign-ups.",
     category:          "Fitness",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     title:            "Stellaris Insurance",
     shortDescription: "A clear and credible demo website template for insurance providers and brokers.",
     fullDescription:
-      "A reassuring, well-structured demo website for insurance companies and brokers. Showcases plan types, coverage highlights, a FAQ section, and lead capture form — designed to build trust and make complex products easy to understand.",
+      "A reassuring, well-structured demo website for insurance companies and brokers. Showcases plan types, coverage highlights, a FAQ section, and lead capture form, designed to build trust and make complex products easy to understand.",
     category:          "Finance",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     title:            "Stellaris Real Estate",
     shortDescription: "A sleek demo website template for real estate agencies and property listing businesses.",
     fullDescription:
-      "A modern, visual-first demo website for real estate agencies. Includes a property listing grid, agent profiles, neighbourhood highlights, and a contact form — styled to appeal to both buyers and sellers looking for a trustworthy agency.",
+      "A modern, visual-first demo website for real estate agencies. Includes a property listing grid, agent profiles, neighbourhood highlights, and a contact form, styled to appeal to both buyers and sellers looking for a trustworthy agency.",
     category:          "Real Estate",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     title:            "ST Cups Cafe",
     shortDescription: "A stylish demo cafe website built to showcase specialty coffee and light bites.",
     fullDescription:
-      "A clean, minimal demo website for a specialty coffee cafe. Features a curated menu display, story section, and contact details — crafted to appeal to coffee lovers and highlight the quality and personality of the cafe brand.",
+      "A clean, minimal demo website for a specialty coffee cafe. Features a curated menu display, story section, and contact details, crafted to appeal to coffee lovers and highlight the quality and personality of the cafe brand.",
     category:          "Restaurant & Cafe",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     title:            "Lorenzo's Cafe",
     shortDescription: "A warm Italian-inspired demo restaurant website with menu and ambience showcasing.",
     fullDescription:
-      "An inviting demo website for an Italian-inspired cafe and restaurant. Showcases the menu with rich food imagery, the story behind the brand, and reservation details — styled to evoke warmth, authenticity, and a love of good food.",
+      "An inviting demo website for an Italian-inspired cafe and restaurant. Showcases the menu with rich food imagery, the story behind the brand, and reservation details, styled to evoke warmth, authenticity, and a love of good food.",
     category:          "Restaurant & Cafe",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     title:            "Chris Diner",
     shortDescription: "A classic American-style diner demo website with a bold menu and venue showcase.",
     fullDescription:
-      "A vibrant, appetite-inspiring demo website for a classic diner. Features a visually engaging menu, opening hours, location map, and a casual brand tone — designed to attract walk-ins and build a loyal local following.",
+      "A vibrant, appetite-inspiring demo website for a classic diner. Features a visually engaging menu, opening hours, location map, and a casual brand tone, designed to attract walk-ins and build a loyal local following.",
     category:          "Restaurant & Cafe",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -246,7 +246,7 @@ export const projects: Project[] = [
     title:            "Thai Time",
     shortDescription: "An aromatic Thai restaurant demo website featuring authentic cuisine and a rich visual identity.",
     fullDescription:
-      "A vibrant demo website for a Thai restaurant business. The site presents a curated menu of authentic Thai dishes, a gallery of dishes and interiors, and contact details — all brought to life in a colour palette and layout that reflects Thai culinary culture.",
+      "A vibrant demo website for a Thai restaurant business. The site presents a curated menu of authentic Thai dishes, a gallery of dishes and interiors, and contact details, all brought to life in a colour palette and layout that reflects Thai culinary culture.",
     category:          "Restaurant & Cafe",
     filterCategories:  ["website", "frontend", "next.js", "react"],
     technologies:      WEBSITE_STACK,
@@ -263,10 +263,10 @@ export const projects: Project[] = [
   {
     id:               "oracle-qr",
     slug:             "oracle-qr-platform",
-    title:            "Oracle — QR Management Platform",
+    title:            "Oracle: QR Management Platform",
     shortDescription: "Full-stack SaaS platform for dynamic and static QR code generation, management, and analytics.",
     fullDescription:
-      "Oracle is a production-grade QR code management platform built for Stellaris Labs clients. It supports dynamic and static QR codes across multiple content types — URLs, plain text, email addresses, phone numbers, SMS, and GPS locations. A real-time dashboard provides campaign management and scan analytics, giving businesses full visibility and control over their QR code strategy.",
+      "Oracle is a production-grade QR code management platform built for Stellaris Labs clients. It supports dynamic and static QR codes across multiple content types: URLs, plain text, email addresses, phone numbers, SMS, and GPS locations. A real-time dashboard provides campaign management and scan analytics, giving businesses full visibility and control over their QR code strategy.",
     category:          "Full Stack Application",
     filterCategories:  ["full-stack", "next.js", "react"],
     technologies:      ["Next.js", "Node.js", "PostgreSQL", "TypeScript", "Tailwind CSS", "Prisma", "Redis"],
@@ -290,7 +290,7 @@ export const projects: Project[] = [
     ],
     challenges:
       "Designing a flexible schema that supports multiple QR content types while keeping API boundaries clean, and ensuring low-latency redirects for dynamic codes at scale.",
-    architecture:  "Monorepo — Next.js App Router frontend with dedicated API routes, PostgreSQL via Prisma ORM",
+    architecture:  "Monorepo: Next.js App Router frontend with dedicated API routes, PostgreSQL via Prisma ORM",
     database:      "PostgreSQL with Prisma ORM",
     authentication: "JWT-based auth with refresh token rotation",
     deployment:    "Vercel (frontend) · Railway (database)",

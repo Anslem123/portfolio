@@ -30,7 +30,7 @@ export function FeaturedProjectsSection() {
           <SectionHeader
             eyebrow="Featured Projects"
             title={<>Things I&apos;ve <span className="gradient-text">built</span></>}
-            description="A selection of projects that demonstrate my approach to building scalable, production-ready software and beautiful client websites."
+            description="Production-ready web applications and client websites — built with React, Next.js, and Node.js, with a focus on performance and clean code."
             align="left"
           />
           <FadeIn delay={0.3}>
@@ -58,7 +58,7 @@ export function FeaturedProjectsSection() {
                     {/* Thumbnail */}
                     <div className="relative h-52 bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)] overflow-hidden">
                       {project.image
-                        ? <ProjectImage src={project.image} alt={project.title} sizes="(max-width: 1024px) 100vw, 50vw" />
+                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 1024px) 100vw, 50vw" />
                         : <Placeholder />
                       }
                       <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -69,7 +69,7 @@ export function FeaturedProjectsSection() {
                       </div>
                     </div>
 
-                    {/* Tint — bleeds from bottom of image into card body */}
+                    {/* Tint: bleeds from bottom of image into card body */}
                     <div
                       aria-hidden
                       className="absolute left-0 right-0 pointer-events-none z-10"
@@ -107,13 +107,13 @@ export function FeaturedProjectsSection() {
                           <Button variant="primary" size="sm" className="w-full">View Details</Button>
                         </Link>
                         {project.githubUrl && (
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}
                             className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] transition-all">
                             <GithubIcon size={16} />
                           </a>
                         )}
                         {project.liveUrl && (
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="Visit website"
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} live website`}
                             className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#22D3EE] transition-all">
                             <ExternalLinkIcon size={16} />
                           </a>

@@ -30,7 +30,7 @@ export function TechStackSection() {
                     {category.category}
                   </h3>
                 </div>
-                <div className="space-y-2">
+                <div className="flex flex-wrap gap-2 md:block md:space-y-2">
                   {category.items.map((tech, ti) => (
                     <motion.div
                       key={tech.name}
@@ -39,13 +39,13 @@ export function TechStackSection() {
                       viewport={{ once: true }}
                       transition={{ delay: ci * 0.1 + ti * 0.06, duration: 0.4 }}
                       whileHover={{ x: 4 }}
-                      className="group flex items-center gap-3 p-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_4px_16px_rgba(108,99,255,0.08)] transition-all duration-200 cursor-default"
+                      className="group flex items-center gap-2 md:gap-3 py-1.5 px-2.5 md:p-3 rounded-full md:rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_4px_16px_rgba(108,99,255,0.08)] transition-all duration-200 cursor-default md:w-full"
                     >
                       <div
-                        className="w-2 h-2 rounded-full shrink-0 opacity-70 group-hover:opacity-100 transition-opacity"
+                        className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full shrink-0 opacity-70 group-hover:opacity-100 transition-opacity"
                         style={{ backgroundColor: tech.color ?? "#6C63FF" }}
                       />
-                      <span className="text-sm font-medium text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+                      <span className="text-xs md:text-sm font-medium text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
                         {tech.name}
                       </span>
                     </motion.div>

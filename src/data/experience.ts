@@ -12,12 +12,12 @@ export const experiences: Experience[] = [
     type:      "full-time",
     description: [
       "Design, develop and maintain scalable full-stack web applications and internal dashboards used across the institute.",
-      "Built a complete dashboard from the ground up — end-to-end, from database schema design to responsive UI — delivering a production-ready internal tool.",
+      "Built a complete dashboard from the ground up (end-to-end, from database schema design to responsive UI), delivering a production-ready internal tool.",
       "Develop interactive data visualisations using D3.js, including dynamic charts and polygon-based map overlays for geospatial data representation.",
       "Build and consume REST APIs with JWT-based authentication, writing optimised SQL queries and designing efficient API endpoints for dashboard data.",
       "Work with relational databases (PostgreSQL, MySQL) with a focus on schema design, query performance and data integrity.",
       "Implement real-time application features and carry out performance optimisation, debugging and systematic testing.",
-      "Contribute Python-based data processing pipelines — including web scraping, data cleaning, transformation and Pandas-based dataset preparation — to feed application workflows.",
+      "Contribute Python-based data processing pipelines (including web scraping, data cleaning, transformation and Pandas-based dataset preparation) to feed application workflows.",
       "Maintain and evolve existing applications by introducing new features while upholding clean, maintainable code standards and modern Git-based workflows.",
     ],
     technologies: [
@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
     location:  "Remote · Goa",
     type:      "freelance",
     description: [
-      "Build and deliver production-ready websites and web applications for clients across multiple industries — including hospitality, healthcare, retail, finance and real estate.",
+      "Build and deliver production-ready websites and web applications for clients across multiple industries, including hospitality, healthcare, retail, finance and real estate.",
       "Architect scalable frontend applications using Next.js and TypeScript, with a strong emphasis on component reusability, performance and maintainability.",
       "Implement full authentication flows using Supabase Auth and integrate Supabase as the backend database layer.",
       "Develop consistent, accessible UI using HeroUI and Tailwind CSS, building reusable component libraries that accelerate delivery across client projects.",

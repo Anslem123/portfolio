@@ -65,6 +65,7 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[var(--text-primary)] leading-[1.08] tracking-tight">
               Hi, I&apos;m{" "}
               <span className="gradient-text">{personal.preferredName}</span>
+              <span className="sr-only"> — {personal.title} based in {personal.location}</span>
             </h1>
           </motion.div>
 
@@ -107,7 +108,7 @@ export function HeroSection() {
               <a
                 href={github.url}
                 target="_blank" rel="noopener noreferrer"
-                aria-label={github.name}
+                aria-label={`View ${personal.preferredName}'s ${github.name} profile`}
                 className="w-10 h-10 rounded-xl flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] hover:bg-[rgba(108,99,255,0.08)] transition-all duration-200"
               >
                 <GithubIcon size={16} />
@@ -117,7 +118,7 @@ export function HeroSection() {
               <a
                 href={linkedin.url}
                 target="_blank" rel="noopener noreferrer"
-                aria-label={linkedin.name}
+                aria-label={`View ${personal.preferredName}'s ${linkedin.name} profile`}
                 className="w-10 h-10 rounded-xl flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] hover:bg-[rgba(108,99,255,0.08)] transition-all duration-200"
               >
                 <LinkedinIcon size={16} />
