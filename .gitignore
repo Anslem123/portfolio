@@ -39,3 +39,35 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ==========================================
+# AI & Editor Files
+# ==========================================
+
+# Cursor / AI instructions
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+CURSOR.md
+
+# Cursor configuration
+.cursor/
+.cursorignore
+
+# Claude Code
+.claude/
+
+# Continue.dev
+.continue/
+
+# GitHub Copilot Workspace
+.copilot/
+
+# Windsurf
+.windsurf/
+
+# Roo Code
+.roo/
+
+# Aider
+.aider*
