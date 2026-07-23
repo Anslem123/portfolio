@@ -45,7 +45,7 @@ export function Header() {
           <div className="flex items-center justify-between gap-4">
 
             {/* Logo: name only, no avatar */}
-            <Link href={ROUTES.home} className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[#6C63FF] transition-colors duration-200" aria-label={`${personal.name} — Home`}>
+            <Link href={ROUTES.home} className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[#6C63FF] transition-colors duration-200" aria-label={`${personal.name} - Home`}>
               {personal.name}<span className="text-[#6C63FF]">.</span>
             </Link>
 

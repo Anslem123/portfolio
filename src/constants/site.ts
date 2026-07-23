@@ -10,7 +10,7 @@ export const ROUTES = {
   about:      "/#about",
   experience: "/#experience",
   contact:    "/#contact",
-  resume:     "/resume.pdf",
+  resume:     "/resume/Anslem_DeSouza_Full_Stack_Developer_Resume.pdf",
 } as const;
 
 export const TYPING_STRINGS = [

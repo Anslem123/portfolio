@@ -8,7 +8,7 @@ export const seo: SEOMetadata = {
     "Anslem De Souza | Full Stack Web Developer | React • Next.js • TypeScript",
   titleTemplate:   "%s | Anslem De Souza",
   description:
-    "Full Stack Web Developer in Goa, India — available for remote and freelance work. I build scalable web apps with React, Next.js, TypeScript, and Node.js.",
+    "Full Stack Web Developer in Goa, India - available for remote and freelance work. I build scalable web apps with React, Next.js, TypeScript, and Node.js.",
   keywords: [
     "Anslem De Souza",
     "Full Stack Web Developer",

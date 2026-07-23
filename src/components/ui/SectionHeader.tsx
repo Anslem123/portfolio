@@ -7,7 +7,7 @@ interface SectionEyebrowProps {
   className?: string;
 }
 
-/** Small gradient pill + label — used before section titles */
+/** Small gradient pill + label - used before section titles */
 export function SectionEyebrow({ children, className }: SectionEyebrowProps) {
   return (
     <span

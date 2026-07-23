@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
+import { TechBadgeList } from "@/components/ui/TechBadge";
 import { SlideIn, FadeIn } from "@/components/animations";
 import { BriefcaseIcon, CalendarIcon, MapPinIcon, ExternalLinkIcon } from "@/components/ui/Icon";
 import { FiBook } from "react-icons/fi";
@@ -95,11 +96,7 @@ export function ExperienceSection() {
                             </li>
                           ))}
                         </ul>
-                        <div className="flex flex-wrap gap-1.5">
-                          {exp.technologies.map((tech) => (
-                            <Badge key={tech} variant="outline" className="text-[10px]">{tech}</Badge>
-                          ))}
-                        </div>
+                        <TechBadgeList items={exp.technologies} size="sm" />
                       </motion.div>
                     </div>
                   </SlideIn>

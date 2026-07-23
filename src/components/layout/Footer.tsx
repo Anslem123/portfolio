@@ -22,7 +22,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-xs">
-              {personal.title} from {personal.location}. Building scalable web applications with React, Next.js, and TypeScript — available for remote and freelance work.
+              {personal.title} from {personal.location}. Building scalable web applications with React, Next.js, and TypeScript - available for remote and freelance work.
             </p>
             <p className="text-xs text-[var(--text-muted)]">
               {personal.location} {personal.locationFlag}

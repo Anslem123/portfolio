@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
+import { TechBadgeList } from "@/components/ui/TechBadge";
 import { Button } from "@/components/ui/Button";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations";
 import {
@@ -51,7 +52,7 @@ export function ProjectsClient() {
           <SectionHeader
             eyebrow="Portfolio"
             title={<>All <span className="gradient-text">Projects</span></>}
-            description="Client websites, demo templates, and full-stack applications — React, Next.js, and Node.js projects built with performance, design quality, and maintainable code."
+            description="Client websites, demo templates, and full-stack applications - React, Next.js, and Node.js projects built with performance, design quality, and maintainable code."
             titleAs="h1"
           />
         </div>
@@ -110,7 +111,7 @@ export function ProjectsClient() {
                     {/* Thumbnail */}
                     <div className="relative h-44 bg-gradient-to-br from-[rgba(108,99,255,0.06)] to-[rgba(34,211,238,0.04)] overflow-hidden">
                       {project.image
-                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         : <Placeholder />
                       }
                       <div className="absolute top-3 right-3 z-10">
@@ -149,15 +150,12 @@ export function ProjectsClient() {
                         ))}
                       </div>
 
-                      {/* Tech badges */}
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {project.technologies.slice(0, 4).map((tech) => (
-                          <Badge key={tech} variant="primary" className="text-[10px]">{tech}</Badge>
-                        ))}
-                        {project.technologies.length > 4 && (
-                          <Badge variant="outline" className="text-[10px]">+{project.technologies.length - 4}</Badge>
-                        )}
-                      </div>
+                      <TechBadgeList
+                        items={project.technologies}
+                        size="sm"
+                        max={4}
+                        className="mb-4"
+                      />
 
                       {/* Actions */}
                       <div className="flex items-center gap-2 pt-3 border-t border-[var(--border-color)]">

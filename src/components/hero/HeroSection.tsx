@@ -65,7 +65,7 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[var(--text-primary)] leading-[1.08] tracking-tight">
               Hi, I&apos;m{" "}
               <span className="gradient-text">{personal.preferredName}</span>
-              <span className="sr-only"> — {personal.title} based in {personal.location}</span>
+              <span className="sr-only"> - {personal.title} based in {personal.location}</span>
             </h1>
           </motion.div>
 

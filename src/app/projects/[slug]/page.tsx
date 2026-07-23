@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
+import { TechBadgeList } from "@/components/ui/TechBadge";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SlideIn, FadeIn } from "@/components/animations";
@@ -78,7 +79,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {/* Hero image banner */}
             <div className="relative w-full h-56 sm:h-72 overflow-hidden bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)]">
               {project.image
-                ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 768px) 100vw, 768px" priority />
+                ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 768px) 100vw, 768px" priority />
                 : <Placeholder />
               }
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-[var(--bg-surface)]/10 to-transparent pointer-events-none" />
@@ -101,11 +102,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             </p>
 
             {/* Tech */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.technologies.map((tech) => (
-                <Badge key={tech} variant="primary">{tech}</Badge>
-              ))}
-            </div>
+            <TechBadgeList items={project.technologies} size="md" className="mb-6" />
 
             {/* Tags */}
             {project.tags.length > 0 && (

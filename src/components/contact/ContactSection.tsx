@@ -141,7 +141,7 @@ export function ContactSection() {
         <SectionHeader
           eyebrow="Get In Touch"
           title={<>Let&apos;s work <span className="gradient-text">together</span></>}
-          description="Whether you need a remote developer, have a freelance project, or want to discuss a full-time role — I'd love to hear from you."
+          description="Whether you need a remote developer, have a freelance project, or want to discuss a full-time role - I'd love to hear from you."
           className="mb-16"
         />
 

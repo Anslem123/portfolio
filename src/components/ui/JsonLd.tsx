@@ -83,7 +83,7 @@ export function StructuredData() {
     name: personal.name,
     url: seo.siteUrl,
     description:
-      "Freelance full stack web development services — React, Next.js, TypeScript, and Node.js applications for clients worldwide.",
+      "Freelance full stack web development services - React, Next.js, TypeScript, and Node.js applications for clients worldwide.",
     areaServed: [
       { "@type": "Country", name: "India" },
       { "@type": "Place", name: "Goa" },

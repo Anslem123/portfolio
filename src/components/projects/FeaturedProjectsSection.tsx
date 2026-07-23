@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
+import { TechBadgeList } from "@/components/ui/TechBadge";
 import { Button } from "@/components/ui/Button";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations";
 import {
@@ -30,7 +31,7 @@ export function FeaturedProjectsSection() {
           <SectionHeader
             eyebrow="Featured Projects"
             title={<>Things I&apos;ve <span className="gradient-text">built</span></>}
-            description="Production-ready web applications and client websites — built with React, Next.js, and Node.js, with a focus on performance and clean code."
+            description="Production-ready web applications and client websites - built with React, Next.js, and Node.js, with a focus on performance and clean code."
             align="left"
           />
           <FadeIn delay={0.3}>
@@ -58,7 +59,7 @@ export function FeaturedProjectsSection() {
                     {/* Thumbnail */}
                     <div className="relative h-52 bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)] overflow-hidden">
                       {project.image
-                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} — ${project.category}`} sizes="(max-width: 1024px) 100vw, 50vw" />
+                        ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 1024px) 100vw, 50vw" />
                         : <Placeholder />
                       }
                       <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -93,14 +94,12 @@ export function FeaturedProjectsSection() {
                         {project.shortDescription}
                       </p>
 
-                      <div className="flex flex-wrap gap-1.5 mb-5">
-                        {project.technologies.slice(0, 5).map((tech) => (
-                          <Badge key={tech} variant="primary" className="text-[10px]">{tech}</Badge>
-                        ))}
-                        {project.technologies.length > 5 && (
-                          <Badge variant="outline" className="text-[10px]">+{project.technologies.length - 5}</Badge>
-                        )}
-                      </div>
+                      <TechBadgeList
+                        items={project.technologies}
+                        size="sm"
+                        max={5}
+                        className="mb-5"
+                      />
 
                       <div className="flex items-center gap-3 pt-4 border-t border-[var(--border-color)]">
                         <Link href={`/projects/${project.slug}`} className="flex-1">
