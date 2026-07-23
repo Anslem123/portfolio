@@ -52,12 +52,12 @@ export function FeaturedProjectsSection() {
                   <motion.div
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.25, ease: EASE.smooth }}
-                    className="group relative flex flex-col h-full rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] overflow-hidden hover:border-[rgba(108,99,255,0.35)] hover:shadow-[0_12px_48px_rgba(108,99,255,0.12)] transition-all duration-300"
+                    className="group relative flex flex-col h-full rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] overflow-hidden hover:border-[var(--brand-a35)] hover:shadow-[0_12px_48px_var(--brand-a12)] transition-all duration-300"
                   >
-                    <div className="h-1 w-full bg-gradient-to-r from-[#6C63FF] via-[#8B84FF] to-[#22D3EE] opacity-60 group-hover:opacity-100 transition-opacity" />
+                    <div className="h-1 w-full bg-gradient-to-r from-[var(--brand)] via-[var(--brand-light)] to-[var(--accent)] opacity-60 group-hover:opacity-100 transition-opacity" />
 
                     {/* Thumbnail */}
-                    <div className="relative h-52 bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)] overflow-hidden">
+                    <div className="relative h-52 bg-gradient-to-br from-[var(--brand-a08)] to-[var(--accent-a04)] overflow-hidden">
                       {project.image
                         ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 1024px) 100vw, 50vw" />
                         : <Placeholder />
@@ -70,7 +70,7 @@ export function FeaturedProjectsSection() {
                       </div>
                     </div>
 
-                    {/* Tint: bleeds from bottom of image into card body */}
+                    {/* Tint */}
                     <div
                       aria-hidden
                       className="absolute left-0 right-0 pointer-events-none z-10"
@@ -83,7 +83,7 @@ export function FeaturedProjectsSection() {
                           <h3 className="font-bold text-[var(--text-primary)] text-lg leading-tight">
                             {project.title}
                           </h3>
-                          <p className="text-sm text-[#6C63FF] font-medium mt-1">{project.category}</p>
+                          <p className="text-sm text-[var(--brand)] font-medium mt-1">{project.category}</p>
                         </div>
                         <span className="text-xs font-mono text-[var(--text-muted)] shrink-0 mt-1">
                           {project.year}
@@ -107,13 +107,13 @@ export function FeaturedProjectsSection() {
                         </Link>
                         {project.githubUrl && (
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}
-                            className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] transition-all">
+                            className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--brand)] transition-all">
                             <GithubIcon size={16} />
                           </a>
                         )}
                         {project.liveUrl && (
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} live website`}
-                            className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#22D3EE] transition-all">
+                            className="w-9 h-9 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--accent)] transition-all">
                             <ExternalLinkIcon size={16} />
                           </a>
                         )}
@@ -127,8 +127,8 @@ export function FeaturedProjectsSection() {
         ) : (
           <FadeIn>
             <div className="py-20 text-center rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)]">
-              <div className="w-16 h-16 rounded-2xl bg-[rgba(108,99,255,0.1)] flex items-center justify-center mx-auto mb-4">
-                <SparklesIcon size={28} className="text-[#6C63FF]" />
+              <div className="w-16 h-16 rounded-2xl bg-[var(--brand-tint)] flex items-center justify-center mx-auto mb-4">
+                <SparklesIcon size={28} className="text-[var(--brand)]" />
               </div>
               <h3 className="font-bold text-[var(--text-primary)] mb-2">Projects coming soon</h3>
               <p className="text-sm text-[var(--text-muted)]">Currently building exciting things. Check back soon!</p>

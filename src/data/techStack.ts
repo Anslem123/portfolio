@@ -16,7 +16,7 @@ export const techStack: TechCategory[] = [
     items: [
       { name: "Node.js",    color: "#339933" },
       { name: "Express.js", color: "#FFFFFF" },
-      { name: "REST API",   color: "#6C63FF" },
+      { name: "REST API",   color: undefined },
       // { name: "GraphQL",    color: "#E10098" },
     ],
   },

@@ -38,7 +38,7 @@ export function ExperienceSection() {
           <div>
             <FadeIn>
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-9 h-9 rounded-xl bg-[rgba(108,99,255,0.12)] flex items-center justify-center text-[#6C63FF]">
+                <div className="w-9 h-9 rounded-xl bg-[var(--brand-tint)] flex items-center justify-center text-[var(--brand)]">
                   <BriefcaseIcon size={16} />
                 </div>
                 <h3 className="font-bold text-[var(--text-primary)] text-lg">Work Experience</h3>
@@ -46,18 +46,18 @@ export function ExperienceSection() {
             </FadeIn>
 
             <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[#6C63FF] via-[rgba(108,99,255,0.3)] to-transparent" />
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--brand)] via-[var(--brand-a30)] to-transparent" />
               <div className="space-y-6">
                 {experiences.map((exp, i) => (
                   <SlideIn key={exp.id} direction="left" delay={i * 0.1}>
                     <div className="relative pl-12">
-                      <div className="absolute left-0 top-4 w-8 h-8 rounded-full bg-[var(--bg-surface)] border-2 border-[#6C63FF] flex items-center justify-center shadow-[0_0_12px_rgba(108,99,255,0.3)]">
-                        <div className="w-2 h-2 rounded-full bg-[#6C63FF]" />
+                      <div className="absolute left-0 top-4 w-8 h-8 rounded-full bg-[var(--bg-surface)] border-2 border-[var(--brand)] flex items-center justify-center shadow-[0_0_12px_var(--brand-a30)]">
+                        <div className="w-2 h-2 rounded-full bg-[var(--brand)]" />
                       </div>
                       <motion.div
                         whileHover={{ x: 4 }}
                         transition={{ duration: 0.2, ease: EASE.smooth }}
-                        className="p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[rgba(108,99,255,0.3)] hover:shadow-[0_4px_24px_rgba(108,99,255,0.08)] transition-all duration-300"
+                        className="p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[var(--brand-a30)] hover:shadow-[0_4px_24px_var(--brand-a08)] transition-all duration-300"
                       >
                         <div className="flex items-start justify-between gap-4 mb-2">
                           <div>
@@ -66,13 +66,13 @@ export function ExperienceSection() {
                               {exp.url ? (
                                 <a
                                   href={exp.url} target="_blank" rel="noopener noreferrer"
-                                  className="text-sm font-medium text-[#6C63FF] hover:underline inline-flex items-center gap-1"
+                                  className="text-sm font-medium text-[var(--brand)] hover:underline inline-flex items-center gap-1"
                                 >
                                   {exp.company}
                                   <ExternalLinkIcon size={11} />
                                 </a>
                               ) : (
-                                <span className="text-sm font-medium text-[#6C63FF]">{exp.company}</span>
+                                <span className="text-sm font-medium text-[var(--brand)]">{exp.company}</span>
                               )}
                             </div>
                           </div>
@@ -91,7 +91,7 @@ export function ExperienceSection() {
                         <ul className="space-y-1.5 mb-4">
                           {exp.description.map((desc, j) => (
                             <li key={j} className="flex gap-2 text-xs text-[var(--text-secondary)] leading-relaxed">
-                              <span className="text-[#6C63FF] mt-0.5 shrink-0">→</span>
+                              <span className="text-[var(--brand)] mt-0.5 shrink-0">→</span>
                               {desc}
                             </li>
                           ))}
@@ -109,7 +109,7 @@ export function ExperienceSection() {
           <div>
             <FadeIn>
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-9 h-9 rounded-xl bg-[rgba(34,211,238,0.1)] flex items-center justify-center text-[#22D3EE]">
+                <div className="w-9 h-9 rounded-xl bg-[var(--accent-a10)] flex items-center justify-center text-[var(--accent)]">
                   <FiBook size={16} />
                 </div>
                 <h3 className="font-bold text-[var(--text-primary)] text-lg">Education</h3>
@@ -117,21 +117,21 @@ export function ExperienceSection() {
             </FadeIn>
 
             <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[#22D3EE] via-[rgba(34,211,238,0.3)] to-transparent" />
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--accent-a30)] to-transparent" />
               <div className="space-y-6">
                 {education.map((edu, i) => (
                   <SlideIn key={edu.id} direction="right" delay={i * 0.1}>
                     <div className="relative pl-12">
-                      <div className="absolute left-0 top-4 w-8 h-8 rounded-full bg-[var(--bg-surface)] border-2 border-[#22D3EE] flex items-center justify-center shadow-[0_0_12px_rgba(34,211,238,0.25)]">
-                        <div className="w-2 h-2 rounded-full bg-[#22D3EE]" />
+                      <div className="absolute left-0 top-4 w-8 h-8 rounded-full bg-[var(--bg-surface)] border-2 border-[var(--accent)] flex items-center justify-center shadow-[0_0_12px_var(--accent-a25)]">
+                        <div className="w-2 h-2 rounded-full bg-[var(--accent)]" />
                       </div>
                       <motion.div
                         whileHover={{ x: 4 }}
                         transition={{ duration: 0.2, ease: EASE.smooth }}
-                        className="p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[rgba(34,211,238,0.25)] hover:shadow-[0_4px_24px_rgba(34,211,238,0.08)] transition-all duration-300"
+                        className="p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[var(--accent-a25)] hover:shadow-[0_4px_24px_var(--accent-a08)] transition-all duration-300"
                       >
                         <h4 className="font-bold text-[var(--text-primary)] text-base mb-1">{edu.degree}</h4>
-                        <p className="text-sm font-medium text-[#22D3EE] mb-3">{edu.institution}</p>
+                        <p className="text-sm font-medium text-[var(--accent)] mb-3">{edu.institution}</p>
                         <div className="flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
                           <CalendarIcon size={11} /> {edu.duration}
                           {edu.endDate === null && (

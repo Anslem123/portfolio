@@ -29,24 +29,23 @@ export function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number,number,number,number] }}
         className={cn(
-          // Always-present base: border-b is constant so its width never transitions
           "fixed top-0 left-0 right-0 z-40 border-b [transform:translateZ(0)]",
-          // Transition only the properties that legitimately change (excludes
-          // backdrop-filter (would cause GPU layer flash) and border-width (constant)
           "transition-[padding,background-color,box-shadow,border-color] duration-300",
           scrolled
-            ? "py-3 glass border-[var(--border-color)] shadow-[0_4px_24px_rgba(0,0,0,0.1)]"
-            // border-transparent: explicit color avoids currentColor flash
-            // shadow zero: same structure as scrolled state so interpolation is clean
+            ? "py-3 glass border-[var(--border-color)] shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
             : "py-5 bg-transparent border-transparent shadow-[0_4px_24px_rgba(0,0,0,0)]"
         )}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
 
-            {/* Logo: name only, no avatar */}
-            <Link href={ROUTES.home} className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[#6C63FF] transition-colors duration-200" aria-label={`${personal.name} - Home`}>
-              {personal.name}<span className="text-[#6C63FF]">.</span>
+            {/* Logo */}
+            <Link
+              href={ROUTES.home}
+              className="font-bold text-[var(--text-primary)] text-sm tracking-tight hover:text-[var(--brand)] transition-colors duration-200"
+              aria-label={`${personal.name} - Home`}
+            >
+              {personal.name}<span className="text-[var(--brand)]">.</span>
             </Link>
 
             {/* Desktop Nav */}
@@ -62,7 +61,7 @@ export function Header() {
                     className={cn(
                       "relative px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200",
                       isActive
-                        ? "text-[#6C63FF]"
+                        ? "text-[var(--brand)]"
                         : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                     )}
                   >
@@ -71,7 +70,7 @@ export function Header() {
                       <motion.span
                         layoutId="nav-active"
                         initial={false}
-                        className="absolute inset-0 rounded-lg bg-[rgba(108,99,255,0.1)]"
+                        className="absolute inset-0 rounded-lg bg-[var(--brand-tint)]"
                         transition={{ duration: 0.2 }}
                       />
                     )}
@@ -98,7 +97,7 @@ export function Header() {
               <a
                 href={personal.resumePath}
                 download
-                className="hidden sm:inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[#6C63FF] text-white text-sm font-semibold hover:bg-[#5046E5] shadow-[0_0_15px_rgba(108,99,255,0.25)] hover:shadow-[0_0_25px_rgba(108,99,255,0.45)] transition-all duration-200"
+                className="hidden sm:inline-flex items-center gap-1.5 h-9 px-4 rounded-lg bg-[var(--brand)] text-white text-sm font-semibold hover:bg-[var(--brand-hover)] shadow-[0_0_15px_var(--brand-a25)] hover:shadow-[0_0_25px_var(--brand-a45)] transition-all duration-200"
               >
                 <DownloadIcon size={14} />
                 Resume
@@ -142,7 +141,7 @@ export function Header() {
                 <a
                   href={personal.resumePath}
                   download
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-[#6C63FF] hover:bg-[rgba(108,99,255,0.1)] transition-colors"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-[var(--brand)] hover:bg-[var(--brand-tint)] transition-colors"
                 >
                   <DownloadIcon size={16} />
                   Download Resume

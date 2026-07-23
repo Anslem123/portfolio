@@ -123,7 +123,7 @@ export function CommandPalette() {
                             <Command.Item
                               key={item.id}
                               onSelect={() => handleSelect(item)}
-                              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--text-secondary)] cursor-pointer data-[selected=true]:bg-[rgba(108,99,255,0.12)] data-[selected=true]:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)] transition-colors duration-100"
+                              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--text-secondary)] cursor-pointer data-[selected=true]:bg-[var(--brand-tint)] data-[selected=true]:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)] transition-colors duration-100"
                             >
                               <span className="w-4 h-4 text-[var(--text-muted)] shrink-0 flex items-center justify-center">
                                 {icon}
@@ -146,7 +146,7 @@ export function CommandPalette() {
       <button
         onClick={toggle}
         aria-label="Open command palette"
-        className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs text-[var(--text-muted)] border border-[var(--border-color)] bg-[var(--bg-elevated)] hover:border-[#6C63FF] hover:text-[var(--text-primary)] transition-colors duration-200"
+        className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs text-[var(--text-muted)] border border-[var(--border-color)] bg-[var(--bg-elevated)] hover:border-[var(--brand)] hover:text-[var(--text-primary)] transition-colors duration-200"
       >
         <SearchIcon size={13} />
         <span>Search…</span>

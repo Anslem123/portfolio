@@ -21,13 +21,13 @@ export default function NotFound() {
         <nav className="flex items-center justify-center gap-4 pt-2" aria-label="Error page navigation">
           <Link
             href={ROUTES.home}
-            className="inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-[#6C63FF] text-white text-sm font-semibold hover:bg-[#5046E5] transition-colors"
+            className="inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-[var(--brand)] text-white text-sm font-semibold hover:bg-[var(--brand-hover)] transition-colors"
           >
             Back to Home
           </Link>
           <Link
             href={ROUTES.projects}
-            className="inline-flex items-center h-11 px-6 rounded-xl border border-[var(--border-color)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] transition-all"
+            className="inline-flex items-center h-11 px-6 rounded-xl border border-[var(--border-color)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--brand)] transition-all"
           >
             View Projects
           </Link>

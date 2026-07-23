@@ -72,9 +72,9 @@ export function AboutSection() {
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2, ease: EASE.smooth }}
-                    className="group h-full p-4 md:p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_8px_32px_rgba(108,99,255,0.1)] transition-all duration-300"
+                    className="group h-full p-4 md:p-5 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[color-mix(in_srgb,var(--brand)_30%,var(--border-color))] hover:bg-[var(--bg-surface)] hover:shadow-[var(--shadow-soft-hover)] transition-all duration-300"
                   >
-                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-[rgba(108,99,255,0.1)] flex items-center justify-center text-[#6C63FF] mb-2.5 md:mb-3 group-hover:bg-[rgba(108,99,255,0.2)] transition-colors">
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-[var(--brand-tint)] flex items-center justify-center text-[var(--brand)] mb-2.5 md:mb-3 group-hover:bg-[color-mix(in_srgb,var(--brand)_18%,transparent)] transition-colors">
                       {IconComp && <IconComp className="w-4 h-4 md:w-5 md:h-5" />}
                     </div>
                     <h3 className="font-semibold text-[var(--text-primary)] text-sm mb-1">

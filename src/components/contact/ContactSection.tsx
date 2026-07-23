@@ -20,14 +20,16 @@ const CONTACT_METHODS = [
     label:    "Email",
     getValue: () => contact.email,
     getHref:  () => `mailto:${contact.email}`,
-    color:    "#6C63FF",
+    color:    "var(--brand)",
+    bgColor:  "var(--brand-a08)",
   },
   {
     iconKey:  "location" as const,
     label:    "Location",
     getValue: () => contact.location,
     getHref:  () => null,
-    color:    "#22D3EE",
+    color:    "var(--accent)",
+    bgColor:  "var(--accent-a08)",
   },
 ] as const;
 
@@ -69,10 +71,10 @@ function SocialCard({ name, handle, url, copyValue, icon }: SocialCardProps) {
       aria-label={`${name}: ${handle}`}
       whileHover="hovered"
       initial="idle"
-      className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.35)] hover:bg-[rgba(108,99,255,0.04)] transition-all duration-200 relative overflow-hidden"
+      className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[var(--brand-a35)] hover:bg-[var(--brand-a04)] transition-all duration-200 relative overflow-hidden"
     >
       {/* Icon */}
-      <span className="w-8 h-8 rounded-lg bg-[rgba(108,99,255,0.08)] flex items-center justify-center text-[#6C63FF] shrink-0">
+      <span className="w-8 h-8 rounded-lg bg-[var(--brand-a08)] flex items-center justify-center text-[var(--brand)] shrink-0">
         {icon}
       </span>
 
@@ -96,7 +98,7 @@ function SocialCard({ name, handle, url, copyValue, icon }: SocialCardProps) {
           hovered: { opacity: 1, scale: 1   },
         }}
         transition={{ duration: 0.15 }}
-        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-muted)] hover:text-[#6C63FF] hover:border-[rgba(108,99,255,0.4)] transition-colors duration-150"
+        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-muted)] hover:text-[var(--brand)] hover:border-[var(--brand-a35)] transition-colors duration-150"
       >
         {copied
           ? <FiCheck size={13} className="text-[#34D399]" />
@@ -159,11 +161,11 @@ export function ContactSection() {
                       key={method.label}
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}
-                      className="flex items-center gap-4 p-4 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:shadow-[0_4px_24px_rgba(108,99,255,0.07)] transition-all duration-200"
+                      className="flex items-center gap-4 p-4 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[var(--brand-a30)] hover:shadow-[0_4px_24px_var(--brand-a07)] transition-all duration-200"
                     >
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                        style={{ backgroundColor: `${method.color}18`, color: method.color }}
+                        style={{ backgroundColor: method.bgColor, color: method.color }}
                       >
                         <IconComp size={18} />
                       </div>
@@ -176,7 +178,7 @@ export function ContactSection() {
                             href={href}
                             target={href.startsWith("http") ? "_blank" : undefined}
                             rel="noopener noreferrer"
-                            className="text-sm font-semibold text-[var(--text-primary)] hover:text-[#6C63FF] transition-colors"
+                            className="text-sm font-semibold text-[var(--text-primary)] hover:text-[var(--brand)] transition-colors"
                           >
                             {method.getValue()}
                           </a>
@@ -226,8 +228,8 @@ export function ContactSection() {
               className="space-y-4 p-6 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-base)]"
             >
               {[
-                { id: "name",    label: "Name",    type: "text",  placeholder: "Your name",           value: form.name    },
-                { id: "email",   label: "Email",   type: "email", placeholder: "your@email.com",       value: form.email   },
+                { id: "name",    label: "Name",    type: "text",  placeholder: "Your name",     value: form.name  },
+                { id: "email",   label: "Email",   type: "email", placeholder: "your@email.com", value: form.email },
               ].map((field) => (
                 <div key={field.id}>
                   <label htmlFor={`contact-${field.id}`} className="block text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-2">
@@ -240,7 +242,7 @@ export function ContactSection() {
                     value={field.value}
                     onChange={(e) => setForm((s) => ({ ...s, [field.id]: e.target.value }))}
                     placeholder={field.placeholder}
-                    className="w-full h-11 px-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#6C63FF] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.1)] transition-all duration-200"
+                    className="w-full h-11 px-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--brand)] focus:shadow-[0_0_0_3px_var(--brand-a10)] transition-all duration-200"
                   />
                 </div>
               ))}
@@ -256,7 +258,7 @@ export function ContactSection() {
                   value={form.message}
                   onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
                   placeholder="Tell me about your project or opportunity…"
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#6C63FF] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.1)] transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--brand)] focus:shadow-[0_0_0_3px_var(--brand-a10)] transition-all duration-200 resize-none"
                 />
               </div>
 

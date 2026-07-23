@@ -67,7 +67,7 @@ export function ProjectsClient() {
                 placeholder="Search by name, tech, or tag…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full h-11 pl-10 pr-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#6C63FF] focus:shadow-[0_0_0_3px_rgba(108,99,255,0.1)] transition-all"
+                className="w-full h-11 pl-10 pr-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-sm placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--brand)] focus:shadow-[0_0_0_3px_var(--brand-a10)] transition-all"
               />
             </div>
             <span className="hidden sm:flex items-center text-xs text-[var(--text-muted)] shrink-0">
@@ -83,8 +83,8 @@ export function ProjectsClient() {
                 onClick={() => setActiveFilter(filter.value)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold border transition-all duration-200 ${
                   activeFilter === filter.value
-                    ? "bg-[#6C63FF] text-white border-[#6C63FF] shadow-[0_0_15px_rgba(108,99,255,0.3)]"
-                    : "bg-[var(--bg-surface)] text-[var(--text-muted)] border-[var(--border-color)] hover:border-[#6C63FF] hover:text-[var(--text-primary)]"
+                    ? "bg-[var(--brand)] text-white border-[var(--brand)] shadow-[0_0_15px_var(--brand-a30)]"
+                    : "bg-[var(--bg-surface)] text-[var(--text-muted)] border-[var(--border-color)] hover:border-[var(--brand)] hover:text-[var(--text-primary)]"
                 }`}
               >
                 {filter.label}
@@ -103,13 +103,13 @@ export function ProjectsClient() {
                   <motion.div
                     whileHover={{ y: -5 }}
                     transition={{ duration: 0.2, ease: EASE.smooth }}
-                    className="group relative flex flex-col h-full rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] overflow-hidden hover:border-[rgba(108,99,255,0.3)] hover:shadow-[0_8px_40px_rgba(108,99,255,0.1)] transition-all duration-300"
+                    className="group relative flex flex-col h-full rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] overflow-hidden hover:border-[var(--brand-a30)] hover:shadow-[0_8px_40px_var(--brand-a10)] transition-all duration-300"
                   >
                     {/* Top accent line */}
-                    <div className="h-0.5 bg-gradient-to-r from-[#6C63FF] to-[#22D3EE] opacity-40 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="h-0.5 bg-gradient-to-r from-[var(--brand)] to-[var(--accent)] opacity-40 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* Thumbnail */}
-                    <div className="relative h-44 bg-gradient-to-br from-[rgba(108,99,255,0.06)] to-[rgba(34,211,238,0.04)] overflow-hidden">
+                    <div className="relative h-44 bg-gradient-to-br from-[var(--brand-a06)] to-[var(--accent-a04)] overflow-hidden">
                       {project.image
                         ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         : <Placeholder />
@@ -129,7 +129,7 @@ export function ProjectsClient() {
                     <div className="relative z-20 flex flex-col flex-1 p-5">
                       {/* Title + category */}
                       <div className="mb-2.5">
-                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#6C63FF] mb-1 block">
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--brand)] mb-1 block">
                           {project.category}
                         </span>
                         <h2 className="font-bold text-[var(--text-primary)] text-base leading-snug">
@@ -186,7 +186,7 @@ export function ProjectsClient() {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] transition-all"
+                            className="w-8 h-8 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--brand)] transition-all"
                             aria-label="GitHub"
                           >
                             <GithubIcon size={14} />
@@ -196,7 +196,7 @@ export function ProjectsClient() {
                         {project.problem && (
                           <Link
                             href={`/projects/${project.slug}`}
-                            className="w-8 h-8 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[#6C63FF] transition-all"
+                            className="w-8 h-8 rounded-lg flex items-center justify-center border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--brand)] transition-all"
                             aria-label="View details"
                           >
                             <CodeIcon size={14} />
@@ -212,8 +212,8 @@ export function ProjectsClient() {
         ) : (
           <FadeIn>
             <div className="py-24 text-center rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)]">
-              <div className="w-16 h-16 rounded-2xl bg-[rgba(108,99,255,0.08)] flex items-center justify-center mx-auto mb-4">
-                <SparklesIcon size={28} className="text-[#6C63FF]" />
+              <div className="w-16 h-16 rounded-2xl bg-[var(--brand-a08)] flex items-center justify-center mx-auto mb-4">
+                <SparklesIcon size={28} className="text-[var(--brand)]" />
               </div>
               <h3 className="font-bold text-[var(--text-primary)] mb-2">No projects found</h3>
               <p className="text-sm text-[var(--text-muted)] mb-6">Try adjusting your search or filter.</p>

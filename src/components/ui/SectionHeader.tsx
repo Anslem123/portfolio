@@ -12,13 +12,13 @@ export function SectionEyebrow({ children, className }: SectionEyebrowProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#6C63FF]",
+        "inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--brand)]",
         className
       )}
     >
       <span
         aria-hidden
-        className="shrink-0 w-7 h-1 rounded-full bg-gradient-to-r from-[#6C63FF] to-[#22D3EE] shadow-[0_0_10px_rgba(108,99,255,0.35)]"
+        className="shrink-0 w-7 h-1 rounded-full bg-gradient-to-r from-[var(--brand)] to-[var(--accent)] shadow-[0_0_10px_var(--brand-a35)]"
       />
       {children}
     </span>

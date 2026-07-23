@@ -25,7 +25,7 @@ export function TechStackSection() {
             <FadeIn key={category.category} delay={ci * 0.1}>
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-1 h-4 rounded-full bg-gradient-to-b from-[#6C63FF] to-[#22D3EE]" />
+                  <div className="w-1 h-4 rounded-full bg-gradient-to-b from-[var(--brand)] to-[var(--accent)]" />
                   <h3 className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">
                     {category.category}
                   </h3>
@@ -39,11 +39,11 @@ export function TechStackSection() {
                       viewport={{ once: true }}
                       transition={{ delay: ci * 0.1 + ti * 0.06, duration: 0.4 }}
                       whileHover={{ x: 4 }}
-                      className="group flex items-center gap-2 md:gap-3 py-1.5 px-2.5 md:p-3 rounded-full md:rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[rgba(108,99,255,0.3)] hover:bg-[var(--bg-surface)] hover:shadow-[0_4px_16px_rgba(108,99,255,0.08)] transition-all duration-200 cursor-default md:w-full"
+                      className="group flex items-center gap-2 md:gap-3 py-1.5 px-2.5 md:p-3 rounded-full md:rounded-xl border border-[var(--border-color)] bg-[var(--bg-base)] hover:border-[color-mix(in_srgb,var(--brand)_30%,var(--border-color))] hover:bg-[var(--bg-surface)] hover:shadow-[var(--shadow-soft)] transition-all duration-200 cursor-default md:w-full"
                     >
                       <div
                         className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full shrink-0 opacity-70 group-hover:opacity-100 transition-opacity"
-                        style={{ backgroundColor: tech.color ?? "#6C63FF" }}
+                        style={{ backgroundColor: tech.color ?? "var(--brand)" }}
                       />
                       <span className="text-xs md:text-sm font-medium text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
                         {tech.name}
@@ -72,7 +72,7 @@ export function TechStackSection() {
                     key={`${di}-${tech.name}`}
                     className="text-sm font-medium text-[var(--text-muted)] flex items-center gap-2"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: tech.color ?? "#6C63FF" }} />
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: tech.color ?? "var(--brand)" }} />
                     {tech.name}
                   </span>
                 ))

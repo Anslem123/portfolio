@@ -20,15 +20,15 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-[#6C63FF] text-white hover:bg-[#5046E5] shadow-[0_0_20px_rgba(108,99,255,0.3)] hover:shadow-[0_0_30px_rgba(108,99,255,0.5)]",
+    "bg-[var(--brand)] text-white hover:bg-[var(--brand-hover)] shadow-[0_0_20px_var(--brand-a30)] hover:shadow-[0_0_30px_var(--brand-a50)]",
   secondary:
-    "bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-color)] hover:border-[#6C63FF] hover:text-[#6C63FF]",
+    "bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-color)] hover:border-[var(--brand)] hover:text-[var(--brand)]",
   ghost:
     "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]",
   outline:
-    "border border-[#6C63FF] text-[#6C63FF] hover:bg-[#6C63FF] hover:text-white",
+    "border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-white",
   glass:
-    "glass text-[var(--text-primary)] hover:border-[rgba(108,99,255,0.4)] hover:shadow-[0_0_20px_rgba(108,99,255,0.15)]",
+    "glass text-[var(--text-primary)] hover:border-[var(--brand-a35)] hover:shadow-[0_0_20px_var(--brand-a15)]",
 };
 
 const sizeClasses: Record<Size, string> = {

@@ -23,10 +23,10 @@ const ICON_MAP: Record<string, ComponentType<IconProps>> = {
 };
 
 const LEVEL_CONFIG: Record<SkillLevel, { label: string; color: string; width: string; dots: number }> = {
-  expert:       { label: "Expert",       color: "#6C63FF", width: "100%", dots: 4 },
-  advanced:     { label: "Advanced",     color: "#22D3EE", width: "80%",  dots: 3 },
-  intermediate: { label: "Intermediate", color: "#FBBF24", width: "60%",  dots: 2 },
-  learning:     { label: "Learning",     color: "#34D399", width: "35%",  dots: 1 },
+  expert:       { label: "Expert",       color: "var(--brand)",   width: "100%", dots: 4 },
+  advanced:     { label: "Advanced",     color: "var(--accent)",  width: "80%",  dots: 3 },
+  intermediate: { label: "Intermediate", color: "#FBBF24",        width: "60%",  dots: 2 },
+  learning:     { label: "Learning",     color: "#34D399",        width: "35%",  dots: 1 },
 };
 
 export function SkillsSection() {
@@ -45,10 +45,10 @@ export function SkillsSection() {
             const IconComp = ICON_MAP[category.iconKey];
             return (
               <FadeIn key={category.category} delay={ci * 0.07}>
-                <div className="h-full p-6 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[rgba(108,99,255,0.25)] hover:shadow-[0_4px_32px_rgba(108,99,255,0.07)] transition-all duration-300">
+                <div className="h-full p-6 rounded-2xl border border-[var(--border-color)] bg-[var(--bg-surface)] hover:border-[var(--brand-a25)] hover:shadow-[0_4px_32px_var(--brand-a07)] transition-all duration-300">
                   <div className="flex items-center gap-3 mb-5">
                     {IconComp && (
-                      <div className="w-8 h-8 rounded-lg bg-[rgba(108,99,255,0.1)] flex items-center justify-center text-[#6C63FF]">
+                      <div className="w-8 h-8 rounded-lg bg-[var(--brand-tint)] flex items-center justify-center text-[var(--brand)]">
                         <IconComp className="w-4 h-4" />
                       </div>
                     )}

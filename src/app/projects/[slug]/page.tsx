@@ -74,10 +74,10 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* Hero card */}
         <SlideIn direction="up" className="mb-10">
           <div className="rounded-3xl border border-[var(--border-color)] bg-[var(--bg-surface)] relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1 z-10 bg-gradient-to-r from-[#6C63FF] to-[#22D3EE]" />
+            <div className="absolute top-0 left-0 right-0 h-1 z-10 bg-gradient-to-r from-[var(--brand)] to-[var(--accent)]" />
 
             {/* Hero image banner */}
-            <div className="relative w-full h-56 sm:h-72 overflow-hidden bg-gradient-to-br from-[rgba(108,99,255,0.08)] to-[rgba(34,211,238,0.05)]">
+            <div className="relative w-full h-56 sm:h-72 overflow-hidden bg-gradient-to-br from-[var(--brand-a08)] to-[var(--accent-a05)]">
               {project.image
                 ? <ProjectImage src={project.image} alt={`Screenshot of ${project.title} - ${project.category}`} sizes="(max-width: 768px) 100vw, 768px" priority />
                 : <Placeholder />
@@ -91,7 +91,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
             <div className="p-8">
 
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#6C63FF] mb-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[var(--brand)] mb-2">
               {project.category}
             </p>
             <h1 id="project-title" className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-3">
@@ -156,11 +156,11 @@ export default async function ProjectDetailPage({ params }: Props) {
               )}
               {project.features && project.features.length > 0 && (
                 <FadeIn delay={0.2}>
-                  <InfoCard title="Key Features" accent="#6C63FF">
+                  <InfoCard title="Key Features" accent="var(--brand)">
                     <ul className="space-y-2">
                       {project.features.map((f, i) => (
                         <li key={i} className="flex gap-2 text-sm text-[var(--text-secondary)]">
-                          <span className="text-[#6C63FF] shrink-0 mt-0.5">→</span>
+                          <span className="text-[var(--brand)] shrink-0 mt-0.5">→</span>
                           {f}
                         </li>
                       ))}
@@ -235,7 +235,7 @@ function InfoCard({ title, accent, children }: { title: string; accent: string; 
 function TechDetail({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
     <div className="flex items-start gap-3 p-3 rounded-xl bg-[var(--bg-base)]">
-      <span className="text-[#6C63FF] shrink-0 mt-0.5">{icon}</span>
+      <span className="text-[var(--brand)] shrink-0 mt-0.5">{icon}</span>
       <div>
         <div className="text-xs text-[var(--text-muted)] font-medium mb-0.5">{label}</div>
         <div className="text-sm text-[var(--text-primary)]">{value}</div>

@@ -34,10 +34,10 @@ export function ProjectImage({ src, alt, sizes, priority }: ProjectImageProps) {
 export function Placeholder() {
   return (
     <>
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(108,99,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(108,99,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(var(--brand-a04)_1px,transparent_1px),linear-gradient(90deg,var(--brand-a04)_1px,transparent_1px)] bg-[size:24px_24px]" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-14 h-14 rounded-2xl bg-[rgba(108,99,255,0.12)] border border-[rgba(108,99,255,0.2)] flex items-center justify-center">
-          <CodeIcon size={26} className="text-[#6C63FF]" />
+        <div className="w-14 h-14 rounded-2xl bg-[var(--brand-tint)] border border-[var(--brand-a20)] flex items-center justify-center">
+          <CodeIcon size={26} className="text-[var(--brand)]" />
         </div>
       </div>
     </>

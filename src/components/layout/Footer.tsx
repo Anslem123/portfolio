@@ -18,7 +18,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <span className="font-bold text-[var(--text-primary)]">
-                {personal.name}<span className="text-[#6C63FF]">.</span>
+                {personal.name}<span className="text-[var(--brand)]">.</span>
               </span>
             </div>
             <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-xs">
@@ -39,7 +39,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[var(--text-secondary)] hover:text-[#6C63FF] transition-colors duration-200"
+                    className="text-sm text-[var(--text-secondary)] hover:text-[var(--brand)] transition-colors duration-200"
                   >
                     {item.label}
                   </Link>
@@ -63,10 +63,10 @@ export function Footer() {
                       href={social.url}
                       target={isExternal ? "_blank" : undefined}
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[#6C63FF] transition-colors duration-200 group"
+                      className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--brand)] transition-colors duration-200 group"
                     >
                       {IconComp && (
-                        <IconComp size={14} className="text-[var(--text-muted)] group-hover:text-[#6C63FF] transition-colors" />
+                        <IconComp size={14} className="text-[var(--text-muted)] group-hover:text-[var(--brand)] transition-colors" />
                       )}
                       {social.name}
                       {isExternal && (
@@ -87,11 +87,11 @@ export function Footer() {
           </p>
           <p className="text-xs text-[var(--text-muted)]">
             Built with{" "}
-            <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="text-[#6C63FF] hover:underline">
+            <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">
               Next.js
             </a>{" "}
             &amp;{" "}
-            <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="text-[#6C63FF] hover:underline">
+            <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">
               Tailwind CSS
             </a>
           </p>
